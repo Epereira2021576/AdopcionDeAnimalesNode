@@ -1,11 +1,5 @@
 const Usuario = require('../models/usuario');
-
-/*const esRoleValido = async (role = '') => {
-  const existeRol = await Usuario.findOne({ role });
-  if (!existeRol) {
-    throw new Error(`${role} role doesn't exist in the database`);
-  }
-};*/
+const Animal = require('../models/animal');
 
 const existenteEmail = async (correo = '') => {
   const existeEmail = await Usuario.findOne({ correo });
@@ -23,7 +17,15 @@ const existeUsuarioById = async (id = '') => {
   }
 };
 
+const existeAnimalById = async (id = '') => {
+  const existeAnimal = await Animal.findOne({ id });
+  if (existeAnimal) {
+    throw new Error(`Mascot with id ${id} doesn't exist in the database`);
+  }
+};
+
 module.exports = {
   existenteEmail,
   existeUsuarioById,
+  existeAnimalById,
 };
