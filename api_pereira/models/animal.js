@@ -15,6 +15,10 @@ const AnimalesSchema = Schema({
     type: String,
     required: [true, 'Mascot type required'],
   },
+  estadoAdopcion: {
+    type: String,
+    required: [true, 'Adoption state required'],
+  },
   estado: {
     type: Boolean,
     default: true,

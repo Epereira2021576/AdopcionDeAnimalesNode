@@ -16,9 +16,6 @@ const UsuarioSchema = Schema({
     type: String,
     required: [true, 'Password is obligatory'],
   },
-  img: {
-    type: String,
-  },
   role: {
     type: String,
     require: true,
@@ -27,10 +24,6 @@ const UsuarioSchema = Schema({
   estado: {
     type: Boolean,
     default: true,
-  },
-  google: {
-    type: Boolean,
-    default: false,
   },
 });
 

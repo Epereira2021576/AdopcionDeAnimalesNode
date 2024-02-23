@@ -27,7 +27,7 @@ router.get(
 );
 
 router.put(
-  '/:id',
+  '/put/:id',
   [
     check('id', 'Invalid id').isMongoId(),
     check('id').custom(existeAnimalById),
@@ -42,13 +42,14 @@ router.post(
     check('nombre', 'Name cannot be empty').not().isEmpty(),
     check('edad', 'Age must be under 20 years').not().isEmpty(),
     check('tipo', 'Mascot Type not valid').not().isEmpty(),
+    check('estadoAdopcion', 'Adoption state not valid').not().isEmpty(),
     validarCampos,
   ],
   animalPost
 );
 
 router.delete(
-  '/:id',
+  '/delete/:id',
   [
     check('id', 'Invalid id').isMongoId(),
     check('id').custom(existeAnimalById),

@@ -27,8 +27,8 @@ const getAnimalById = async (req, res) => {
 };
 
 const animalPost = async (req, res) => {
-  const { nombre, edad, tipo } = req.body;
-  const animal = new Animal({ nombre, edad, tipo });
+  const { nombre, edad, tipo, estadoAdopcion } = req.body;
+  const animal = new Animal({ nombre, edad, tipo, estadoAdopcion });
 
   await animal.save();
   res.status(202).json({
@@ -36,12 +36,11 @@ const animalPost = async (req, res) => {
   });
 };
 
-const animalPut = async (req, res = response) => {
+const animalPut = async (req, res) => {
   const { id } = req.params;
-  const { _id, ...resto } = req.body;
-
-  const animal = await Animal.findByIdAndUpdate(id, resto);
-
+  const { _id, tipo, estado, ...resto } = req.body;
+  await Animal.findByIdAndUpdate(id, resto);
+  const animal = await Animal.findOne({ _id: id });
   res.status(200).json({
     msg: 'Mascot Updated',
     animal,

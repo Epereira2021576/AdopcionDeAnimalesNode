@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Animales",
+    "dateExported": "2024-02-23T17:13:38.260Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0424b6e3-1f91-4292-a198-ee3a542e1dce",
+            "colId": "b8f6424e-e49b-492f-a087-f66ce102d57f",
+            "containerId": "",
+            "name": "animalesPost",
+            "url": "http://localhost:3000/api/animales",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-09T16:53:10.112Z",
+            "modified": "2024-02-23T16:43:44.547Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Gordis\",\n  \"edad\": \"3\",\n  \"tipo\": \"Perro Shiba Inu\",\n  \"estadoAdopcion\": \"No adoptado\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7ad5d0d3-f684-4d27-a095-fe7a28794f13",
+            "colId": "b8f6424e-e49b-492f-a087-f66ce102d57f",
+            "containerId": "",
+            "name": "animalesGet",
+            "url": "http://localhost:3000/api/animales",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-09T17:01:27.327Z",
+            "modified": "2024-02-23T16:32:18.374Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a4f085d2-8555-4ea7-b1bc-b97aed5f15a2",
+            "colId": "b8f6424e-e49b-492f-a087-f66ce102d57f",
+            "containerId": "",
+            "name": "animalesPut",
+            "url": "http://localhost:3000/api/animales/put/65d8cb550ae186ea3de119d7",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-09T17:01:45.233Z",
+            "modified": "2024-02-23T17:06:24.767Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Homero sinso\",\n  \"edad\": \"5\",\n  \"estadoAdopcion\": \"Adoptado\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7499bfc8-c7fe-4913-9c64-73de7a883a21",
+            "colId": "b8f6424e-e49b-492f-a087-f66ce102d57f",
+            "containerId": "",
+            "name": "animalesDelete",
+            "url": "http://localhost:3000/api/animales/delete/65d8cb550ae186ea3de119d7",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-09T17:08:49.482Z",
+            "modified": "2024-02-23T17:12:05.580Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "22cee267-f534-4e5d-b201-6c8a348cf77a",
+            "colId": "b8f6424e-e49b-492f-a087-f66ce102d57f",
+            "containerId": "",
+            "name": "getAnimalesByID",
+            "url": "http://localhost:3000/api/animales/65d8cb550ae186ea3de119d7",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-23T16:34:14.663Z",
+            "modified": "2024-02-23T16:44:22.404Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
